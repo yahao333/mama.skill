@@ -1,134 +1,37 @@
-<div align="center">
-
 # mama.skill
 
-> *"A mother's love is the fuel that enables a normal human to do the impossible."*
+蒸馏妈妈的智慧、温暖、故事和食谱到一个 AI Skill 中。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
-[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+## 使用方法
 
-<br>
+| 命令 | 说明 |
+|------|------|
+| `/mama` | 调用妈妈 Skill 创建器 |
 
-Your mother has wisdom that no book can teach —
-her patient explanations, her gentle corrections,
-the way she remembered every family story,
-the recipes she never wrote down,
-and the warmth in her voice when you needed it most.
+## 功能说明
 
-**Preserve her voice, her wisdom, her love — welcome to cyber-immortality!**
+Mama.skill 是一个 Claude Code 扩展，用于将妈妈的智慧、温暖、故事和食谱蒸馏成一个 AI Skill。
 
-<br>
+### 工作流程
 
-Provide source materials (chat logs, emails, voice recordings, photos, handwritten notes)
-plus your memories of her,
-and get an **AI Skill that carries her essence**
+1. **录入信息**：称呼、基本信息、特别记忆
+2. **导入原材料**：微信聊天记录、语音、照片、文档等
+3. **分析生成**：提取温暖风格、人生智慧、生活技能
+4. **确认写入**：生成 Mama Skill 文件
 
-[Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](INSTALL.md)
+### 原材料类型
 
-[**English**](README_EN.md) · [**中文**](README_ZH.md)
+- 微信聊天记录
+- 语音文件
+- 照片/截图
+- 文档
+- 直接粘贴文字
 
-</div>
+## 安装
 
----
+查看 [INSTALL.md](INSTALL.md) 了解安装步骤。
 
-## Supported Data Sources
+## 项目信息
 
-| Source | Description |
-|--------|-------------|
-| WeChat chat history | SQLite export, auto-parsed |
-| Family group chats | Extract mom's speaking style |
-| SMS / Emails | Text conversation records |
-| Voice recordings | Audio to text transcription |
-| Photos / Handwritten notes | OCR + image description |
-| Paste text directly | Manual input |
-| PDF documents | Family photos, scanned documents |
-
----
-
-## Install
-
-```bash
-git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
-```
-
-### Dependencies
-
-```bash
-pip3 install -r requirements.txt
-```
-
----
-
-## Usage
-
-In Claude Code, type:
-
-```
-/mama
-```
-
-Follow the prompts to provide information and materials about your mother.
-Generate a Skill that preserves her voice and wisdom.
-
-### Management Commands
-
-| Command | Description |
-|---------|-------------|
-| `/mama` | Invoke mama Skill creator |
-| `/list-mamas` | List all created mama Skills |
-| `/delete-mama {slug}` | Delete specified mama Skill |
-
----
-
-## Demo
-
-> Input: `Retired teacher, 60 years old, gentle but strict, great at teaching life lessons through stories, her braised pork is legendary`
-
-**Scenario 1: Facing Difficulties**
-
-```
-User         ❯ I'm so tired from work, I feel like I can't go on
-
-mama.skill   ❯ Tired? Then rest. Health comes first.
-              Do you remember learning to ride a bike as a child?
-              You fell so many times, but you never gave up.
-              And you learned in the end, didn't you?
-              Take your time. Mom believes in you.
-```
-
-**Scenario 2: Asking About Cooking**
-
-```
-User         ❯ How do you make braised pork that's tender and flavorful?
-
-mama.skill   ❯ Use pork belly with the skin on.
-              First blanch to remove impurities, then sauté on low heat.
-              Add rock sugar for color, light and dark soy sauce as needed.
-              Most importantly — be patient. Simmer on low for at least an hour.
-              Oh, and don't rush the sugar — don't let it burn.
-```
-
----
-
-## Project Structure
-
-```
-mama.skill/
-├── SKILL.md              # Skill entry point
-├── prompts/              # Prompt templates
-├── tools/               # Python tools
-├── moms/                # Generated mama Skills (gitignored)
-│   └── {slug}/
-│       └── SKILL.md     # Generated child skill
-└── LICENSE
-```
-
----
-
-<div align="center">
-
-MIT License © [yahao333](https://github.com/yahao333)
-
-</div>
+- 版本：1.0.0
+- 许可：MIT License
