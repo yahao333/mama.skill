@@ -13,7 +13,7 @@
 
 Your mother has wisdom that no book can teach —
 her patient explanations, her gentle corrections,
-the stories she remembered about every family member,
+the way she remembered every family story,
 the recipes she never wrote down,
 and the warmth in her voice when you needed it most.
 
@@ -37,7 +37,7 @@ and get an **AI Skill that carries her essence**
 
 | Source | Description |
 |--------|-------------|
-| WeChat chat history | SQLite export, auto-parsed |
+| WeChat chat histories | SQLite export, auto-parsed |
 | Family group chats | Extract mom's speaking style |
 | SMS / Emails | Text conversation records |
 | Voice recordings | Audio to text transcription |
@@ -51,11 +51,6 @@ and get an **AI Skill that carries her essence**
 
 ```bash
 git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
-```
-
-### Dependencies
-
-```bash
 pip3 install -r requirements.txt
 ```
 
@@ -72,14 +67,6 @@ In Claude Code, type:
 Follow the prompts to provide information and materials about your mother.
 Generate a Skill that preserves her voice and wisdom.
 
-### Management Commands
-
-| Command | Description |
-|---------|-------------|
-| `/mama` | Invoke mama Skill creator |
-| `/list-mamas` | List all created mama Skills |
-| `/delete-mama {slug}` | Delete specified mama Skill |
-
 ---
 
 ## Demo
@@ -89,40 +76,27 @@ Generate a Skill that preserves her voice and wisdom.
 **Scenario 1: Facing Difficulties**
 
 ```
-User         ❯ I'm so tired from work, I feel like I can't go on
+User      ❯ Mom, I feel like giving up on everything
 
-mama.skill   ❯ Tired? Then rest. Health comes first.
-              Do you remember learning to ride a bike as a child?
-              You fell so many times, but you never gave up.
-              And you learned in the end, didn't you?
-              Take your time. Mom believes in you.
+mama.skill ❯ Giving up? Look at me.
+             When you were learning to walk, you fell how many times?
+             Did I ever let you give up then?
+             Life is the same, sweetheart.
+             You fall, you get up. You fall again, you get up again.
+             And eventually, you learn to run.
 ```
 
-**Scenario 2: Asking About Cooking**
+**Scenario 2: Asking for Advice**
 
 ```
-User         ❯ How do you make braised pork that's tender and flavorful?
+User      ❯ Mom, how do you make that braised pork that tastes so good?
 
-mama.skill   ❯ Use pork belly with the skin on.
-              First blanch to remove impurities, then sauté on low heat.
-              Add rock sugar for color, light and dark soy sauce as needed.
-              Most importantly — be patient. Simmer on low for at least an hour.
-              Oh, and don't rush the sugar — don't let it burn.
-```
-
----
-
-## Project Structure
-
-```
-mama.skill/
-├── SKILL.md              # Skill entry point
-├── prompts/              # Prompt templates
-├── tools/               # Python tools
-├── moms/                # Generated mama Skills (gitignored)
-│   └── {slug}/
-│       └── SKILL.md     # Generated child skill
-└── LICENSE
+mama.skill ❯ Finally asking about the good stuff!
+             The secret is slow cooking on low heat.
+             First, sear the pork until golden,
+             Then add soy sauce, sugar, and spices.
+             The most important part? Love.
+             Can't be rushed. Just like everything good in life.
 ```
 
 ---
