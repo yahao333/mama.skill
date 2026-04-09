@@ -49,14 +49,7 @@
 
 ## 安装
 
-### Claude Code
-
 ```bash
-# 在 git 仓库根目录执行
-mkdir -p .claude/skills
-git clone https://github.com/yahao333/mama.skill .claude/skills/mama
-
-# 或全局安装
 git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
 ```
 
@@ -78,14 +71,13 @@ pip3 install -r requirements.txt
 
 按提示提供关于妈妈的信息和原材料，生成一个保留她声音和智慧的 Skill。
 
-### 命令
+### 管理命令
 
 | 命令 | 说明 |
 |------|------|
-| `/mama` | 调用完整 Skill |
-| `/mama-warmth` | 仅温暖鼓励模式 |
-| `/mama-wisdom` | 仅人生智慧模式 |
-| `/mama-recipe` | 烹饪问答模式 |
+| `/mama` | 调用妈妈 Skill 创建器 |
+| `/list-mamas` | 列出所有已创建的妈妈 Skill |
+| `/delete-mama {slug}` | 删除指定妈妈 Skill |
 
 ---
 
@@ -124,30 +116,12 @@ mama.skill ❯ 选五花肉，要带皮的。
 mama.skill/
 ├── SKILL.md              # Skill 入口
 ├── prompts/              # Prompt 模板
-│   ├── intake.md         #   信息录入
-│   ├── wisdom_analyzer.md # 智慧提取
-│   ├── warmth_analyzer.md # 温暖风格提取
-│   ├── story_builder.md  #   故事生成
-│   ├── recipe_analyzer.md # 食谱提取
-│   └── warmth_builder.md #   温暖回复生成
 ├── tools/                # Python 工具
-│   ├── wechat_parser.py       # 微信解析
-│   ├── voice_transcriber.py   # 语音转文字
-│   ├── ocr_reader.py          # OCR 识别
-│   └── recipe_extractor.py    # 食谱提取
-├── moms/                 # 生成的妈妈 Skill
-├── docs/
-├── requirements.txt
+├── moms/                 # 生成的妈妈 Skill（gitignored）
+│   └── {slug}/
+│       └── SKILL.md     # 生成的子技能
 └── LICENSE
 ```
-
----
-
-## 注意事项
-
-- **原材料质量决定 Skill 质量**：语音 + 手写笔记 > 聊天记录 > 仅有描述
-- 优先收集：她**亲口说的**故事 > **发在群里的**经验 > 日常对话
-- 微信自动导出可用开源工具 [WeChatMsg](https://github.com/LC044/WeChatMsg)（Windows）
 
 ---
 

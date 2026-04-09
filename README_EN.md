@@ -49,14 +49,7 @@ and get an **AI Skill that carries her essence**
 
 ## Install
 
-### Claude Code
-
 ```bash
-# Run at git repo root
-mkdir -p .claude/skills
-git clone https://github.com/yahao333/mama.skill .claude/skills/mama
-
-# Or install globally
 git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
 ```
 
@@ -79,14 +72,13 @@ In Claude Code, type:
 Follow the prompts to provide information and materials about your mother.
 Generate a Skill that preserves her voice and wisdom.
 
-### Commands
+### Management Commands
 
 | Command | Description |
 |---------|-------------|
-| `/mama` | Invoke full Skill |
-| `/mama-warmth` | Warmth and encouragement mode |
-| `/mama-wisdom` | Life wisdom mode |
-| `/mama-recipe` | Cooking Q&A mode |
+| `/mama` | Invoke mama Skill creator |
+| `/list-mamas` | List all created mama Skills |
+| `/delete-mama {slug}` | Delete specified mama Skill |
 
 ---
 
@@ -126,30 +118,12 @@ mama.skill   ❯ Use pork belly with the skin on.
 mama.skill/
 ├── SKILL.md              # Skill entry point
 ├── prompts/              # Prompt templates
-│   ├── intake.md        #   Info collection
-│   ├── wisdom_analyzer.md # Wisdom extraction
-│   ├── warmth_analyzer.md # Warmth style extraction
-│   ├── story_builder.md #   Story generation
-│   ├── recipe_analyzer.md # Recipe extraction
-│   └── warmth_builder.md # Warm response generation
 ├── tools/               # Python tools
-│   ├── wechat_parser.py      # WeChat parser
-│   ├── voice_transcriber.py  # Voice transcription
-│   ├── ocr_reader.py         # OCR recognition
-│   └── recipe_extractor.py   # Recipe extraction
-├── moms/                # Generated mama Skills
-├── docs/
-├── requirements.txt
+├── moms/                # Generated mama Skills (gitignored)
+│   └── {slug}/
+│       └── SKILL.md     # Generated child skill
 └── LICENSE
 ```
-
----
-
-## Notes
-
-- **Source quality determines Skill quality**: Voice + handwritten notes > Chat logs > Description only
-- Prioritize: Stories **she told** > Experience **she shared in groups** > Daily chat
-- WeChat export tools: [WeChatMsg](https://github.com/LC044/WeChatMsg) (Windows)
 
 ---
 

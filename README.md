@@ -13,7 +13,8 @@
 
 Your mother has wisdom that no book can teach —
 her patient explanations, her gentle corrections,
-the way she remembered every family story,<nthe recipes she never wrote down,
+the way she remembered every family story,
+the recipes she never wrote down,
 and the warmth in her voice when you needed it most.
 
 **Preserve her voice, her wisdom, her love — welcome to cyber-immortality!**
@@ -21,9 +22,10 @@ and the warmth in her voice when you needed it most.
 <br>
 
 Provide source materials (chat logs, emails, voice recordings, photos, handwritten notes)
-plus your memories of her,<nand get an **AI Skill that carries her essence**
+plus your memories of her,
+and get an **AI Skill that carries her essence**
 
-[数据来源](#支持的数据来源) · [安装](#安装) · [使用](#使用) · [效果示例](#效果示例) · [详细安装说明](INSTALL.md)
+[Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](INSTALL.md)
 
 [**English**](README_EN.md) · [**中文**](README_ZH.md)
 
@@ -31,34 +33,27 @@ plus your memories of her,<nand get an **AI Skill that carries her essence**
 
 ---
 
-## 支持的数据来源
+## Supported Data Sources
 
-| 来源 | 说明 |
-|------|------|
-| 微信聊天记录 | SQLite 格式导出，自动解析 |
-| 家庭群聊记录 | 提取妈妈的发言风格 |
-| 短信 / 邮件 | 文字对话记录 |
-| 语音转文字 | 录音文件转文本 |
-| 照片 / 手写笔记 | OCR 识别 + 图像描述 |
-| 直接粘贴文字 | 手动输入 |
-| PDF 文档 | 家庭照片、扫描件 |
+| Source | Description |
+|--------|-------------|
+| WeChat chat history | SQLite export, auto-parsed |
+| Family group chats | Extract mom's speaking style |
+| SMS / Emails | Text conversation records |
+| Voice recordings | Audio to text transcription |
+| Photos / Handwritten notes | OCR + image description |
+| Paste text directly | Manual input |
+| PDF documents | Family photos, scanned documents |
 
 ---
 
-## 安装
-
-### Claude Code
+## Install
 
 ```bash
-# 在 git 仓库根目录执行
-mkdir -p .claude/skills
-git clone https://github.com/yahao333/mama.skill .claude/skills/mama
-
-# 或全局安装
 git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
 ```
 
-### 依赖
+### Dependencies
 
 ```bash
 pip3 install -r requirements.txt
@@ -66,86 +61,69 @@ pip3 install -r requirements.txt
 
 ---
 
-## 使用
+## Usage
 
-在 Claude Code 中输入：
+In Claude Code, type:
 
 ```
 /mama
 ```
 
-按提示提供关于妈妈的信息和原材料，生成一个保留她声音和智慧的 Skill。
+Follow the prompts to provide information and materials about your mother.
+Generate a Skill that preserves her voice and wisdom.
 
-### 命令
+### Management Commands
 
-| 命令 | 说明 |
-|------|------|
-| `/mama` | 调用完整 Skill |
-| `/mama-warmth` | 仅温暖鼓励模式 |
-| `/mama-wisdom` | 仅人生智慧模式 |
-| `/mama-recipe` | 烹饪问答模式 |
-
----
-
-## 效果示例
-
-> 输入：`退休教师，60岁，温柔但严格，特别擅长讲人生道理，喜欢用故事教育人，做的红烧肉是一绝`
-
-**场景一：遇到困难**
-
-```
-用户      ❯ 我工作好累，感觉坚持不下去了
-
-mama.skill ❯ 累了就休息一下嘛，身体是革命的本钱。
-             你还记得你小时候学骑车吗？摔了多少次，
-             但你就是不肯放弃，最后不也学会了吗？
-             慢慢来，妈妈相信你。
-```
-
-**场景二：请教做饭**
-
-```
-用户      ❯ 红烧肉怎么做才软烂入味？
-
-mama.skill ❯ 选五花肉，要带皮的。
-             先焯水去腥，然后小火慢炒，
-             加冰糖上色，生抽老抽各适量，
-             最重要的是——要有耐心，小火炖至少一个小时。
-             对了，炒糖色的时候别急，别糊了。
-```
+| Command | Description |
+|---------|-------------|
+| `/mama` | Invoke mama Skill creator |
+| `/list-mamas` | List all created mama Skills |
+| `/delete-mama {slug}` | Delete specified mama Skill |
 
 ---
 
-## 项目结构
+## Demo
+
+> Input: `Retired teacher, 60 years old, gentle but strict, great at teaching life lessons through stories, her braised pork is legendary`
+
+**Scenario 1: Facing Difficulties**
+
+```
+User         ❯ I'm so tired from work, I feel like I can't go on
+
+mama.skill   ❯ Tired? Then rest. Health comes first.
+              Do you remember learning to ride a bike as a child?
+              You fell so many times, but you never gave up.
+              And you learned in the end, didn't you?
+              Take your time. Mom believes in you.
+```
+
+**Scenario 2: Asking About Cooking**
+
+```
+User         ❯ How do you make braised pork that's tender and flavorful?
+
+mama.skill   ❯ Use pork belly with the skin on.
+              First blanch to remove impurities, then sauté on low heat.
+              Add rock sugar for color, light and dark soy sauce as needed.
+              Most importantly — be patient. Simmer on low for at least an hour.
+              Oh, and don't rush the sugar — don't let it burn.
+```
+
+---
+
+## Project Structure
 
 ```
 mama.skill/
-├── SKILL.md              # Skill 入口
-├── prompts/              # Prompt 模板
-│   ├── intake.md         #   信息录入
-│   ├── wisdom_analyzer.md # 智慧提取
-│   ├── warmth_analyzer.md # 温暖风格提取
-│   ├── story_builder.md  #   故事生成
-│   ├── recipe_analyzer.md # 食谱提取
-│   └── warmth_builder.md #   温暖回复生成
-├── tools/                # Python 工具
-│   ├── wechat_parser.py       # 微信解析
-│   ├── voice_transcriber.py   # 语音转文字
-│   ├── ocr_reader.py          # OCR 识别
-│   └── recipe_extractor.py    # 食谱提取
-├── moms/                 # 生成的妈妈 Skill
-├── docs/
-├── requirements.txt
+├── SKILL.md              # Skill entry point
+├── prompts/              # Prompt templates
+├── tools/               # Python tools
+├── moms/                # Generated mama Skills (gitignored)
+│   └── {slug}/
+│       └── SKILL.md     # Generated child skill
 └── LICENSE
 ```
-
----
-
-## 注意事项
-
-- **原材料质量决定 Skill 质量**：语音 + 手写笔记 > 聊天记录 > 仅有描述
-- 优先收集：她**亲口说的**故事 > **发在群里的**经验 > 日常对话
-- 微信自动导出可用开源工具 [WeChatMsg](https://github.com/LC044/WeChatMsg)（Windows）
 
 ---
 
