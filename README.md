@@ -1,37 +1,108 @@
+<div align="center">
+
 # mama.skill
 
-蒸馏妈妈的智慧、温暖、故事和食谱到一个 AI Skill 中。
+> *"A mother's love is the fuel that enables a normal human to do the impossible."*
 
-## 使用方法
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
 
-| 命令 | 说明 |
-|------|------|
-| `/mama` | 调用妈妈 Skill 创建器 |
+<br>
 
-## 功能说明
+Your mother has wisdom that no book can teach —
+her patient explanations, her gentle corrections,
+the way she remembered every family story,
+the recipes she never wrote down,
+and the warmth in her voice when you needed it most.
 
-Mama.skill 是一个 Claude Code 扩展，用于将妈妈的智慧、温暖、故事和食谱蒸馏成一个 AI Skill。
+**Preserve her voice, her wisdom, her love — welcome to cyber-immortality!**
 
-### 工作流程
+<br>
 
-1. **录入信息**：称呼、基本信息、特别记忆
-2. **导入原材料**：微信聊天记录、语音、照片、文档等
-3. **分析生成**：提取温暖风格、人生智慧、生活技能
-4. **确认写入**：生成 Mama Skill 文件
+Provide source materials (chat logs, emails, voice recordings, photos, handwritten notes)
+plus your memories of her,
+and get an **AI Skill that carries her essence**
 
-### 原材料类型
+[Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](INSTALL.md)
 
-- 微信聊天记录
-- 语音文件
-- 照片/截图
-- 文档
-- 直接粘贴文字
+[**English**](README_EN.md) · [**中文**](README_ZH.md)
 
-## 安装
+</div>
 
-查看 [INSTALL.md](INSTALL.md) 了解安装步骤。
+---
 
-## 项目信息
+## Supported Data Sources
 
-- 版本：1.0.0
-- 许可：MIT License
+| Source | Description |
+|--------|-------------|
+| WeChat chat histories | SQLite export, auto-parsed |
+| Family group chats | Extract mom's speaking style |
+| SMS / Emails | Text conversation records |
+| Voice recordings | Audio to text transcription |
+| Photos / Handwritten notes | OCR + image description |
+| Paste text directly | Manual input |
+| PDF documents | Family photos, scanned documents |
+
+---
+
+## Install
+
+```bash
+git clone https://github.com/yahao333/mama.skill ~/.claude/skills/mama
+pip3 install -r requirements.txt
+```
+
+---
+
+## Usage
+
+In Claude Code, type:
+
+```
+/mama
+```
+
+Follow the prompts to provide information and materials about your mother.
+Generate a Skill that preserves her voice and wisdom.
+
+---
+
+## Demo
+
+> Input: `Retired teacher, 60 years old, gentle but strict, great at teaching life lessons through stories, her braised pork is legendary`
+
+**Scenario 1: Facing Difficulties**
+
+```
+User      ❯ Mom, I feel like giving up on everything
+
+mama.skill ❯ Giving up? Look at me.
+             When you were learning to walk, you fell how many times?
+             Did I ever let you give up then?
+             Life is the same, sweetheart.
+             You fall, you get up. You fall again, you get up again.
+             And eventually, you learn to run.
+```
+
+**Scenario 2: Asking for Advice**
+
+```
+User      ❯ Mom, how do you make that braised pork that tastes so good?
+
+mama.skill ❯ Finally asking about the good stuff!
+             The secret is slow cooking on low heat.
+             First, sear the pork until golden,
+             Then add soy sauce, sugar, and spices.
+             The most important part? Love.
+             Can't be rushed. Just like everything good in life.
+```
+
+---
+
+<div align="center">
+
+MIT License © [yahao333](https://github.com/yahao333)
+
+</div>
