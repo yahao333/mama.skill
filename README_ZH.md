@@ -2,7 +2,7 @@
 
 # mama.skill
 
-> *"A mother's love is the fuel that enables a normal human to do the impossible."*
+> *"母亲的爱是让普通人完成不可能事业的燃料。"*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
@@ -11,19 +11,21 @@
 
 <br>
 
-Your mother has wisdom that no book can teach —
-her patient explanations, her gentle corrections,
-the way she remembered every family story,<nthe recipes she never wrote down,
-and the warmth in her voice when you needed it most.
+妈妈有智慧，那些没有任何书能教的东西 ——
+她耐心的解释，她温柔的纠正，
+她记得的每一个家庭故事，
+她从不写下来的食谱，
+还有当你最需要时，她声音里的温暖。
 
-**Preserve her voice, her wisdom, her love — welcome to cyber-immortality!**
+**保留她的声音，她的智慧，她的爱 —— 欢迎加入赛博永生！**
 
 <br>
 
-Provide source materials (chat logs, emails, voice recordings, photos, handwritten notes)
-plus your memories of her,<nand get an **AI Skill that carries her essence**
+提供原材料（聊天记录、邮件、语音、照片、手写笔记）
+加上你对她的记忆，
+生成一个**承载她灵魂的 AI Skill**
 
-[数据来源](#支持的数据来源) · [安装](#安装) · [使用](#使用) · [效果示例](#效果示例) · [详细安装说明](INSTALL.md)
+[支持的数据来源](#支持的数据来源) · [安装](#安装) · [使用](#使用) · [效果示例](#效果示例) · [详细安装说明](INSTALL.md)
 
 [**English**](README_EN.md) · [**中文**](README_ZH.md)
 
